@@ -7,6 +7,7 @@
            <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>  
       </head>  
       <body>  
+		
            <br /><br />  
 		   
 		   
@@ -15,6 +16,8 @@
 				
                 <div ng-app="myapp" ng-controller="usercontroller" ng-init="displayData()">  
                      
+					 <div class="alert">{{outPut}}</div>
+		
 					 <label>First Name</label>  
                      <input type="text" name="first_name" ng-model="firstname" class="form-control" />  
                      <br />  
@@ -94,11 +97,12 @@
                 $http.post(  
                      "insert.php",  
                      {'firstname':$scope.firstname, 'lastname':$scope.lastname, 'btnName':$scope.btnName, 'id':$scope.id}  
-                ).success(function(data){  
+                ).success(function(data){ 
                      alert(data);  
                      $scope.firstname = null;  
                      $scope.lastname = null;  
-                     $scope.btnName = "ADD";  
+                     $scope.btnName = "ADD";
+$scope.outPut ="ADDED"					 ;
                      $scope.displayData();  
                 });  
            }  

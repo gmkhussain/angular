@@ -13,7 +13,7 @@
            $query = "INSERT INTO tbl_user(first_name, last_name) VALUES ('$first_name', '$last_name')";  
            if(mysqli_query($connect, $query))  
            {  
-                echo "Data Inserted...";  
+                echo "Data Inserted";  
            }  
            else  
            {  
