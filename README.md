@@ -27,3 +27,44 @@
 	{{ something }}
 </div>
 ```
+
+
+
+### Select with JSON data in AngularJS with ng-options
+```
+data.JSON
+{
+	"count": 2,
+	"data": [{
+		"name": "Alex Josh",
+		"email": "alex@josh.com",
+		"phone": "+11245457",
+		"followup": "2017/10/18",
+		
+		
+		"country": [
+					  {
+						"id": "1",
+						"val": "Japan"
+					  },
+					  {
+						"id": "2",
+						"val": "China"
+					  },
+					  {
+						"id": "3",
+						"val": "UK"
+					  }
+					]
+					
+					
+	}]
+}
+```
+
+index.PHP
+```
+	<select ng-options="selected.val for selected in lead.country" ng-model="customPerson">
+		<option value="" disabled>Country</option>
+	</select>
+```
