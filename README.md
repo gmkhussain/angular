@@ -1,5 +1,35 @@
+# <img src="https://cdn-images-1.medium.com/max/250/1*nWtdFBcmwNz0cRB8YidO0w.png" style="position: relative; top: 5px;" height="80" /> Angular (2+)
+
+<div style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZwAAAGcCAMAAADan+YLAAAARVBMV…0FgTymlBa1DomIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiMj/AfenZSPkyOYhAAAAAElFTkSuQmCC);
+    font-family: "Roboto", sans-serif;">
+
+## Setup
+* Open command prompt 
+* Install CLI: Type [`npm install -g @angular/cli`] press Enter
+* Verification: Type [`ng --verison`] press Enter
+* Create New Project: Type [`ng new project-name`] press Enter <b>Check folder</b>
+* Now you can start coding...
+
+</div>
+
+### Recommanded IDE/Code Editor [Visual Studio Code](https://code.visualstudio.com)
+
+<img src="https://cloud.githubusercontent.com/assets/11839736/16642200/6624dde0-43bd-11e6-8595-c81885ba0dc2.png" />
+
+
+
+
+
+
+
+
+
+
+
+
+
 # AngularJS
-==============
+
 
 ### Input value not visible in angularJS is ignored
 ```
