@@ -1,20 +1,45 @@
 # <img src="https://cdn-images-1.medium.com/max/250/1*nWtdFBcmwNz0cRB8YidO0w.png" style="position: relative; top: 5px;" height="80" /> Angular (2+)
 
-<div style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZwAAAGcCAMAAADan+YLAAAARVBMV…0FgTymlBa1DomIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiMj/AfenZSPkyOYhAAAAAElFTkSuQmCC);
-    font-family: "Roboto", sans-serif;">
 
 ## Setup
+* <img src="https://camo.githubusercontent.com/b6ba9075a54c192efc59bba53c92e7c23ec8cfe8/68747470733a2f2f63646e2e7261776769742e636f6d2f67696c626172626172612f6c6f676f732f653762316463323636366333646162653663313237366162643061373637623665626436616634332f6c6f676f732f6e6f64656a732d69636f6e2e737667" / height="24"/> NodeJS Required 
 * Open command prompt 
 * Install CLI: Type [`npm install -g @angular/cli`] press Enter
 * Verification: Type [`ng --verison`] press Enter
 * Create New Project: Type [`ng new project-name`] press Enter <b>Check folder</b>
 * Now you can start coding...
 
-</div>
+
 
 ### Recommanded IDE/Code Editor [Visual Studio Code](https://code.visualstudio.com)
 
 <img src="https://cloud.githubusercontent.com/assets/11839736/16642200/6624dde0-43bd-11e6-8595-c81885ba0dc2.png" />
+
+
+
+## Install Typescript
+* [`npm install -g typescript`]
+* [`tsc --version`]
+
+
+
+
+## How to edit index page
+
+* Open App folder>src>app>app.component.html //
+* 						 >app.component.ts //
+
+
+
+
+## How to Run Application in Angular
+* Open App folder
+* Type [`ng serve`] press Enter
+* Browser on http://localhost:4200/
+
+
+
+
 
 
 
