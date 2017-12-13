@@ -2,7 +2,9 @@
 
 
 ## Setup
-* <img src="https://camo.githubusercontent.com/b6ba9075a54c192efc59bba53c92e7c23ec8cfe8/68747470733a2f2f63646e2e7261776769742e636f6d2f67696c626172626172612f6c6f676f732f653762316463323636366333646162653663313237366162643061373637623665626436616634332f6c6f676f732f6e6f64656a732d69636f6e2e737667" / height="24"/> NodeJS Required 
+
+<img src="https://jaystack.com/wp-content/uploads/2015/12/nodejs-logo-e1497443346889.png" height="24"/> NodeJS Required 
+
 * Open command prompt 
 * Install CLI: Type [`npm install -g @angular/cli`] press Enter
 * Verification: Type [`ng --verison`] press Enter
@@ -22,12 +24,14 @@
 * [`tsc --version`]
 
 
+### Typescript compile command
+* [`tsc filename.ts`]
 
 
 ## How to edit index page
 
-* Open App folder>src>app>app.component.html //
-* 						 >app.component.ts //
+* App-folder>src>app>app.component.html 
+* App-folder>src>app>app.component.ts 
 
 
 
@@ -39,6 +43,45 @@
 
 
 
+
+
+## How fetch data from JSON format in Angular 4
+
+
+### file: app.component.ts 
+```
+import { Component, Pipe, PipeTransform } from '@angular/core'; //make sure Pipe added
+
+
+// AppComponent for JSON
+export class AppComponent {
+
+  title = 'My Data';
+  dataJson = [
+    {
+      "name": "Jennifer Deo",
+      "age": "32"
+  },
+  {
+      "name": "Alex Josh",
+      "age": "28"
+  }
+  ];
+  myData = this.dataJson[0];
+}
+```
+
+
+
+### file: app.component.html
+```
+<ul>
+    <li *ngFor="let data of dataJson">
+     Name:  {{ data.name }} <br/>
+     Age:  {{ data.age }} 
+    </li>
+</ul>
+```
 
 
 
