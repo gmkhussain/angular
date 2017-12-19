@@ -87,6 +87,35 @@ export class AppComponent {
 
 
 
+## How to Add Bootstrap to an Angular CLI project
+* open [`cmd`]
+* type [`npm install bootstrap@3.1.1`] press enter
+* open [`.angular-cli.json`] file.
+
+```
+...
+// find following code and add required files
+...
+	"styles": [
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "../src/assets/css/ionicons.min.css",
+        "../src/assets/css/stylized.css",
+        "styles.css"
+      ],
+      "scripts": [
+        "../src/assets/js/jquery-2.2.4.min.js",
+        "../node_modules/bootstrap/dist/js/bootstrap.min.js",
+        "../src/assets/js/kodeized.js"
+      ]
+```
+
+
+
+
+
+
+
+
 
 
 
