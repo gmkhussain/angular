@@ -124,6 +124,26 @@ ngAfterViewInit() {
 
 
 
+### Bootstrap progress bar with angular 5
+```
+//file.ts
+public myWidth = 59;
+
+//file.html
+<div [style.width]="myWidth + '%'" >
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
