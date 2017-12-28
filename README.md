@@ -111,6 +111,15 @@ export class AppComponent {
 
 
 
+### How to add JS on component level in Angular 5
+```
+// in your component.TS file
+ngAfterViewInit() {
+
+     alert("do some java script");
+	  
+  }
+```
 
 
 
