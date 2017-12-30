@@ -139,6 +139,32 @@ public myWidth = 59;
 
 
 
+### How to set Bootstrap navbar active class in Angular 5
+
+```
+<ul class="nav navbar-nav">
+  <li [routerLinkActive]="['active']"> <a [routerLink]="['home']">Home</a></li>
+  <li [routerLinkActive]="['active']"> <a [routerLink]="['contact']">Contact</a></li>
+</ul>
+```
+
+
+
+
+
+
+### How to add class on "first-child" and "last-child" with ngFor in Angular 5
+```
+//[class.active]="index==0" //First Child
+//[class.active]="first" //First Child
+//[class.active]="last" //Last Child
+<ul>
+	<li *ngFor="let time of alarmlist.timeframe; let i = index; let first = first; let last = last" [attr.data-index]="i" [class.active]="last"></li>
+</ul>
+```
+
+
+
 
 
 
