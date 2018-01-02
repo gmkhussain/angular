@@ -188,6 +188,27 @@ in file tsconfig.json
 
 
 
+### How to call function every 2 mins in Angular 5
+```
+//name.component.ts
+import {Observable} from 'rxjs/Rx';
+
+  Observable.interval(2000 * 60).subscribe(x => {
+    //doSomething();
+	console.log("Observable message")
+  });
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
 
