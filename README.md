@@ -166,6 +166,32 @@ public myWidth = 59;
 
 
 
+### Cannot find name 'jQuery' - Failed to compile Angular 5
+```
+//add in typings.d.ts [Tested]
+declare var $: any;
+declare var jQuery: any;
+```
+
+```
+//Not Tested
+npm install --save-dev
+
+and then add
+
+"types": [
+"jquery"
+]
+
+in file tsconfig.json
+```
+
+
+
+
+
+
+
 
 
 
