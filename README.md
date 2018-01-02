@@ -201,6 +201,12 @@ import {Observable} from 'rxjs/Rx';
 
 
 
+### How to use *ngIf else in Angular 5
+
+<div *ngIf="store == open then hasContent else hasNoContent"></div>
+
+<ng-template #hasContent> Store is Open </ng-template>
+<ng-template #hasNoContent> Store is Closed </ng-template>
 
 
 
