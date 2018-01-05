@@ -49,7 +49,7 @@
 
 
 ### file: app.component.ts 
-```
+```javascript
 import { Component, Pipe, PipeTransform } from '@angular/core'; //make sure Pipe added
 
 
@@ -61,11 +61,11 @@ export class AppComponent {
     {
       "name": "Jennifer Deo",
       "age": "32"
-  },
-  {
+	},
+	{
       "name": "Alex Josh",
       "age": "28"
-  }
+	}
   ];
   myData = this.dataJson[0];
 }
@@ -74,7 +74,7 @@ export class AppComponent {
 
 
 ### file: app.component.html
-```
+```javascript
 <ul>
     <li *ngFor="let data of dataJson">
      Name:  {{ data.name }} <br/>
@@ -92,7 +92,7 @@ export class AppComponent {
 * type [`npm install bootstrap@3.1.1`] press enter
 * open [`.angular-cli.json`] file.
 
-```
+```javascript
 ...
 // find following code and add required files
 ...
@@ -112,7 +112,7 @@ export class AppComponent {
 
 
 ### How to add JS on component level in Angular 5
-```
+```javascript
 // in your component.TS file
 ngAfterViewInit() {
 
@@ -125,7 +125,7 @@ ngAfterViewInit() {
 
 
 ### Bootstrap progress bar with angular 5
-```
+```javascript
 //file.ts
 public myWidth = 59;
 
@@ -141,7 +141,7 @@ public myWidth = 59;
 
 ### How to set Bootstrap navbar active class in Angular 5
 
-```
+```javascript
 <ul class="nav navbar-nav">
   <li [routerLinkActive]="['active']"> <a [routerLink]="['home']">Home</a></li>
   <li [routerLinkActive]="['active']"> <a [routerLink]="['contact']">Contact</a></li>
@@ -154,7 +154,7 @@ public myWidth = 59;
 
 
 ### How to add class on "first-child" and "last-child" with ngFor in Angular 5
-```
+```javascript
 //[class.active]="index==0" //First Child
 //[class.active]="first" //First Child
 //[class.active]="last" //Last Child
@@ -167,13 +167,13 @@ public myWidth = 59;
 
 
 ### Cannot find name 'jQuery' - Failed to compile Angular 5
-```
+```javascript
 //add in typings.d.ts [Tested]
 declare var $: any;
 declare var jQuery: any;
 ```
 
-```
+```javascript
 //Not Tested
 npm install --save-dev
 
@@ -189,7 +189,7 @@ in file tsconfig.json
 
 
 ### How to call function every 2 mins in Angular 5
-```
+```javascript
 //name.component.ts
 import {Observable} from 'rxjs/Rx';
 
@@ -202,13 +202,63 @@ import {Observable} from 'rxjs/Rx';
 
 
 ### How to use *ngIf else in Angular 5
-
+```javascript
 <div *ngIf="store == open then hasContent else hasNoContent"></div>
 
 <ng-template #hasContent> Store is Open </ng-template>
 <ng-template #hasNoContent> Store is Closed </ng-template>
+```
 
 
+
+
+
+
+### How to create routing in Angular 5
+
+Use the CLI to generate it. c:\projectName\src\app>
+```javascript
+ ng generate module app-routing --flat --module=app
+	//--flat puts the file in src/app instead of its own folder.
+	//--module=app tells the CLI to register it in the imports array of the AppModule.
+```
+
+<b>Output:</b> src/app/app-routing.module.ts (generated file)
+<br/>
+<b>Note:</b> Create component (page e.g about, contact)
+
+			##### app-routing.module.ts
+			```javascript
+			import { NgModule }             from '@angular/core';
+			import { RouterModule, Routes } from '@angular/router';
+			import { AboutComponent }      from './about/about.component';
+			import { ContactComponent }      from './contact/contact.component';
+
+			const routes: Routes = [
+			  { path: '', component: AboutComponent }, //Default Page
+			  { path: 'about', component: AboutComponent },
+			  { path: 'contact', component: ContactComponent }
+			];
+
+			@NgModule({
+			  exports: [ RouterModule ],
+			  imports: [ RouterModule.forRoot(routes) ]
+			})
+
+			export class AppRoutingModule {}
+			```
+
+
+				
+			##### app.component.html
+			```javascript
+				<h1>{{title}}</h1>
+				<nav>
+				  <a routerLink="/about">about</a>
+				  <a routerLink="/contact">Contact</a>
+				</nav>
+				<router-outlet></router-outlet>
+			```
 
 
 
