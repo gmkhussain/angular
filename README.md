@@ -227,8 +227,8 @@ Use the CLI to generate it. c:\projectName\src\app>
 <br/>
 <b>Note:</b> Create component (page e.g about, contact)
 
-			##### app-routing.module.ts
-			```javascript
+#### app-routing.module.ts
+```javascript
 			import { NgModule }             from '@angular/core';
 			import { RouterModule, Routes } from '@angular/router';
 			import { AboutComponent }      from './about/about.component';
@@ -246,21 +246,31 @@ Use the CLI to generate it. c:\projectName\src\app>
 			})
 
 			export class AppRoutingModule {}
-			```
+```
 
 
 				
-			##### app.component.html
-			```javascript
-				<h1>{{title}}</h1>
-				<nav>
-				  <a routerLink="/about">about</a>
-				  <a routerLink="/contact">Contact</a>
-				</nav>
-				<router-outlet></router-outlet>
-			```
+#### app.component.html
+```html
+		<h1>{{title}}</h1>
+		<nav>
+		  <a routerLink="/about">about</a>
+		  <a routerLink="/contact">Contact</a>
+		</nav>
+		<router-outlet></router-outlet>
+```
 
 
+
+
+#### How to delete a component in Angular 5
+```ng g c demoComponent``` It creates a separate folder named demoComponent.
+It generate HTML,CSS,ts and a spec file dedicated to demoComponent.
+Also, It adds dependency inside app.module.ts file to add that component to your project.
+
+<b>so do it in reverse order</b>
+Remove Dependency from ```app.module.ts```
+Delete that component folder.
 
 
 
@@ -287,7 +297,7 @@ Use the CLI to generate it. c:\projectName\src\app>
 
 
 ### Input value not visible in angularJS is ignored
-```
+```html
 <input type="text" ng-model="InputName" ng-init="InputName='James Deo'" value="James Deo">
 ```
 
@@ -295,7 +305,7 @@ Use the CLI to generate it. c:\projectName\src\app>
 
 ### If input value is blank, assign "some new value" value with AngularJS
 
-```
+```html
 <div ng-app="app">
 	<input ng-model="emailSubject"  placeholder="Email Subject" />
 
@@ -306,7 +316,7 @@ Use the CLI to generate it. c:\projectName\src\app>
 
 
 ### How to hide brackets until page loaded in AngularJS {{ }}
-```
+```html
 //add class="ng-cloak" or ng-cloak to an element like this
 <div class="ng-cloak">
 	{{ something }}
@@ -316,7 +326,7 @@ Use the CLI to generate it. c:\projectName\src\app>
 
 
 ### Select with JSON data in AngularJS with ng-options
-```
+```html
 data.JSON
 {
 	"count": 2,
@@ -348,7 +358,7 @@ data.JSON
 ```
 
 index.PHP
-```
+```html
 	<select ng-options="selected.val for selected in lead.country" ng-model="customPerson">
 		<option value="" disabled>Country</option>
 	</select>
