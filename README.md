@@ -275,6 +275,52 @@ Delete that component folder.
 
 
 
+### How to load data from JSON to local file with http.get() in Angular 5
+
+1. Inside your ```assets``` folder create a ```FileName.json``` file.
+
+2. Go to ```angular.cli.json``` inside your project and inside the assets array put another object (after the package.json object) like this: (<b>Optional</b>)
+
+```{ "glob": "FileName.json", "input": "./", "output": "./assets/" }```
+
+full example from angular.cli.json
+```javascript
+"apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico",
+        { "glob": "package.json", "input": "../", "output": "./assets/" },
+        { "glob": "FileName.json", "input": "./", "output": "./assets/" }
+      ],
+```
+
+
+3. Now can access your file via localhost. http://localhost:your_port/assets/FileName.json
+
+
+4. Now GET request to retrieve your .JSON file
+
+```javascript
+ constructor(private http: HttpClient) {}
+        // Make the HTTP request:
+        this.http.get('http://localhost:your_port/assets/data.json')
+                 .subscribe(data => {
+                   console.log(data)
+                });
+```
+
+
+
+
+
+
+
+
+
+
 
 
 
