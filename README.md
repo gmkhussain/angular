@@ -124,6 +124,20 @@ ngAfterViewInit() {
 
 
 
+### Load java script file after template render
+Use this method ( <code>ngAfterViewInit()</code> ) on desire <code>AppComponent</code> is a lifecycle callback Angular calls after the root component and it's children have been rendered and it should work for load file after template render purpose.
+
+```javascript
+  ngAfterViewInit() {
+    $.getScript('assets/js/myScript.js');
+  }
+```
+
+
+
+
+
+
 ### Bootstrap progress bar with angular 5
 ```javascript
 //file.ts
