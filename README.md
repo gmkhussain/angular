@@ -287,6 +287,13 @@ Remove Dependency from ```app.module.ts```
 Delete that component folder.
 
 
+```mermaid
+graph LR
+C((Component)) --> A[HTML file]
+C --> B[CSS file]
+C --> D[TS.Spec file]
+C --> E[TS file]
+```
 
 
 ### How to load data from JSON to local file with http.get() in Angular 5
@@ -325,6 +332,38 @@ full example from angular.cli.json
                    console.log(data)
                 });
 ```
+
+
+
+
+
+
+
+###  Not able to use ng-model in Angular 5. Uncaught Error: Template parse errors: can't bind to 'ngmodel' since it isn't a known property of 'input'
+
+There are two possible reasons
+* Missing FormsModule, hence Add this to your Module,
+* Check the syntax/spelling of [(ngModel)]
+
+In order to use two-way data binding for form inputs you need to import the FormsModule package in your Angular module.
+
+```javascript
+//File location: src/app/app.module.ts
+...
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+...
+@NgModule({
+    imports: [
+		...
+        FormsModule      
+		...
+    ]
+	
+```
+
+
+
+
 
 
 
